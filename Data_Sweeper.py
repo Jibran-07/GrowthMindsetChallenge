@@ -12,13 +12,6 @@ st.markdown(
             background: radial-gradient(circle, #141414, #0a0a0a);
             padding: 1.5rem;
         }
-        .app-container {
-            padding: 3rem;
-            border-radius: 20px;
-            background: #2a2a2c;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-            border: 1px solid #404040;
-        }
         h1, h2, h3 {
             color: #a1d8ff;
             font-family: 'Helvetica', sans-serif;
