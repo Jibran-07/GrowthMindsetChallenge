@@ -122,6 +122,6 @@ if file_drop:
                 file_name=new_name,
                 mime=file_type
             )
-
-st.success("✨ Transformation complete!")
+            st.success("✨ Transformation complete!")
+            
 st.markdown("</div>", unsafe_allow_html=True)
