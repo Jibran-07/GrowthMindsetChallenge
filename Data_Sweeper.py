@@ -81,7 +81,7 @@ if file_drop:
         st.write("First Glance:")
         st.dataframe(dataset.head())
 
-        st.subheader("Purification Chamber")
+        st.subheader("Clean Data")
         if st.checkbox(f"Refine {data_file.name}"):
             left, right = st.columns(2)
             with left:
@@ -94,15 +94,15 @@ if file_drop:
                     dataset[num_fields] = dataset[num_fields].fillna(dataset[num_fields].mean())
                     st.write("Voids Repaired!")
 
-        st.subheader("Element Selector")
+        st.subheader("Column Selector")
         fields = st.multiselect(f"Extract Elements from {data_file.name}", dataset.columns, default=dataset.columns)
         dataset = dataset[fields]
 
-        st.subheader("Insight Forge")
+        st.subheader("Visualize Data")
         if st.checkbox(f"Reveal Patterns in {data_file.name}"):
             st.bar_chart(dataset.select_dtypes(include='number').iloc[:, :2])
 
-        st.subheader("Transmutation Vault")
+        st.subheader("Convert Data")
         output_form = st.radio(f"Reform {data_file.name} as:", ["CSV", "Excel"], key=data_file.name)
         if st.button(f"Transmute {data_file.name}"):
             output_stream = BytesIO()
